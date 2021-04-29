@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListBubbleSortSwapNodes", "LinkedListBubbleSortSwapNodes\LinkedListBubbleSortSwapNodes.csproj", "{67B21677-133E-4376-9FA6-64398BCB9A24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67B21677-133E-4376-9FA6-64398BCB9A24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B21677-133E-4376-9FA6-64398BCB9A24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B21677-133E-4376-9FA6-64398BCB9A24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B21677-133E-4376-9FA6-64398BCB9A24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B0F4F73E-A18D-4F37-B1B5-0D243456DD18}
+	EndGlobalSection
+EndGlobal
