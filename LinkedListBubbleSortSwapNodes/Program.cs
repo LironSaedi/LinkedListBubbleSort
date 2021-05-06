@@ -8,24 +8,26 @@ namespace LinkedListBubbleSortSwapNodes
         {
             Node nodesNextNext = node.Next.Next;
             Node nodesNext = node.Next;
-            Node nodesNextNextNext;
-            if (node.Next.Next.Next.Value != null)
+
+            Node nodesNextNextNext = null;
+            if (node?.Next?.Next?.Next != null)
             {
                 nodesNextNextNext = node.Next.Next.Next;
             }
 
             node.Next.Next = null;
             node.Next = null;
-           
+
 
             node.Next = nodesNextNext;
-            nodesNextNext.Next = nodesNext;
-            nodesNext.Next = nodesNextNextNext;
-            if (nodesNextNextNext!= null)
+
+            if (nodesNextNext != null)
             {
-                
+                nodesNextNext.Next = nodesNext;
             }
-         
+            nodesNext.Next = nodesNextNextNext;
+
+
         }
 
         static void Main(string[] args)
@@ -64,47 +66,56 @@ namespace LinkedListBubbleSortSwapNodes
                 current = current.Next;
             }
 
-      SwapNextWithNextNext(list);
+            //  SwapNextWithNextNext(list);
 
 
             ;
 
-
-            current = list;
-            for (int i = 0; i < count; i++)
+            bool didSwapHappen= false;
+            do
             {
-                swapped = false;
-                for (int j = 0; j < count - 2; j++)
-                {
-                    //Node temp1 = current;
+                Console.WriteLine();
+                Console.WriteLine("Starting sorting loop");
 
-//                    Node temp2 = temp1.Next;
+                current = list;
+                didSwapHappen = false;
+                
+                while(current != null)
+                {
+                    if (current.Next == null)
+                    {
+                        break;
+                    }
+
+                    Console.WriteLine($"Comparing {current.Value} with {current.Next.Value}");
 
                     if (current.Value > current.Next.Value)
                     {
-                        //SwapNextWithNextNext(previous);
+                        Console.WriteLine($"Swapping {current.Value} with {current.Next.Value}");
 
-                        SwapNextWithNextNext(current);
-                        swapped = true;
+                        // TEST CODE
+                        var temp = current.Value;
+                        current.Value = current.Next.Value;
+                        current.Next.Value = temp;
+
+                        
+                        //SwapNextWithNextNext(current);
+                        didSwapHappen = true;
                     }
-
+                    
+                    Console.WriteLine("Advancing to next node");
                     current = current.Next;
                 }
 
-                if (swapped == false)
-                {
-                    break;
-                }
-            }
-
+            } while (didSwapHappen);
 
             Console.WriteLine(" ");
             Console.Write("Sorted List");
             Console.WriteLine("");
 
             current = list;
-            for (int i = 0; i < count; i++)
-            {
+            while(current != null)
+            { 
                 Console.WriteLine(current.Value);
                 current = current.Next;
             }
